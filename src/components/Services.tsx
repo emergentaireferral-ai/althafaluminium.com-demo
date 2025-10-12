@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import servicePartitions from "@/assets/service-partitions.jpg";
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
@@ -50,17 +49,11 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="relative animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <GlowingEffect
-                spread={40}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                borderWidth={2}
-              />
-              <Card className="group overflow-hidden border shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer">
-              
+            <Card
+              key={index}
+              className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer animate-scale-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -93,7 +86,6 @@ const Services = () => {
                 </p>
               </div>
             </Card>
-            </div>
           ))}
         </div>
       </div>

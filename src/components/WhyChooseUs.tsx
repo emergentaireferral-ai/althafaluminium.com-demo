@@ -1,5 +1,4 @@
 import { Shield, Zap, Palette, DollarSign } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -57,18 +56,11 @@ const WhyChooseUs = () => {
               >
                 {/* Icon Container */}
                 <div className="relative inline-block mb-6">
-                  <GlowingEffect
-                    spread={35}
-                    glow={true}
-                    disabled={false}
-                    proximity={100}
-                    inactiveZone={0.1}
-                    borderWidth={2}
-                    variant="white"
-                  />
-                  <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:shadow-glow border border-white/10">
+                  <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:shadow-glow">
                     <Icon className="w-12 h-12 text-white group-hover:scale-110 transition-transform duration-300" />
                   </div>
+                  {/* Decorative Circle */}
+                  <div className="absolute -inset-2 border-2 border-white/20 rounded-2xl group-hover:border-white/40 transition-colors duration-300" />
                 </div>
 
                 {/* Content */}

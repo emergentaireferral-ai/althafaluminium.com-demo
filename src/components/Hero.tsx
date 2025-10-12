@@ -1,29 +1,35 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
+
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const scrollToAbout = () => {
     const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image with Parallax Effect */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBackground})`,
-      backgroundAttachment: "fixed"
-    }}>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-background/90" />
       </div>
 
@@ -42,12 +48,21 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button onClick={scrollToContact} size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 group">
+            <Button
+              onClick={scrollToContact}
+              size="lg"
+              className="bg-gradient-accent hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 group"
+            >
               Get a Free Quote
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Button>
             
-            <Button onClick={scrollToAbout} size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 backdrop-blur-sm">
+            <Button
+              onClick={scrollToAbout}
+              size="lg"
+              variant="outline"
+              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 backdrop-blur-sm"
+            >
               Learn More
             </Button>
           </div>
@@ -55,11 +70,17 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button onClick={scrollToAbout} className="text-white/70 hover:text-white transition-colors" aria-label="Scroll to next section">
-            
+          <button
+            onClick={scrollToAbout}
+            className="text-white/70 hover:text-white transition-colors"
+            aria-label="Scroll to next section"
+          >
+            <ArrowDown size={32} />
           </button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

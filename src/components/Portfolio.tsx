@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -47,19 +46,12 @@ const Portfolio = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="relative animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <GlowingEffect
-                spread={40}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                borderWidth={2}
-              />
-              <Card
-                onClick={() => setSelectedProject(index)}
-                className="group overflow-hidden border shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer"
-              >
+            <Card
+              key={index}
+              onClick={() => setSelectedProject(index)}
+              className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer animate-scale-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
                 <img
@@ -83,7 +75,6 @@ const Portfolio = () => {
                 </div>
               </div>
             </Card>
-            </div>
           ))}
         </div>
 
