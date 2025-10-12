@@ -33,10 +33,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-primary/5"
-          : "bg-gradient-to-b from-background/40 to-transparent backdrop-blur-sm"
+          ? "bg-background/95 backdrop-blur-md shadow-medium"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ const Navbar = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-2xl font-heading font-bold text-gradient-metallic hover:scale-110 hover:rotate-1 transition-all duration-300 cursor-pointer"
+            className="text-2xl font-heading font-bold text-gradient-metallic hover:scale-105 transition-transform"
           >
             Althaf Aluminium
           </a>
@@ -63,16 +63,15 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-foreground/90 hover:text-accent font-medium transition-all duration-300 relative group hover:scale-110"
+                className="text-foreground hover:text-accent font-medium transition-colors relative group"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-accent group-hover:w-full transition-all duration-300" />
-                <span className="absolute inset-0 bg-accent/5 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300 -z-10" />
               </a>
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="bg-background/20 backdrop-blur-md border border-accent/30 text-accent hover:bg-accent/20 hover:border-accent hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="bg-gradient-accent hover:shadow-glow transition-all duration-300"
             >
               Get Quote
             </Button>
@@ -81,7 +80,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground hover:text-accent transition-all duration-300 hover:scale-110 hover:rotate-90 p-2 rounded-lg hover:bg-accent/10 backdrop-blur-sm"
+            className="md:hidden text-foreground hover:text-accent transition-colors"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -89,8 +88,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-background/80 backdrop-blur-xl rounded-xl shadow-strong border border-white/10 mt-2 py-4 animate-fade-in overflow-hidden">
-            {navLinks.map((link, index) => (
+          <div className="md:hidden bg-background/98 backdrop-blur-md rounded-lg shadow-strong mt-2 py-4 animate-fade-in">
+            {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -98,8 +97,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="block px-4 py-3 text-foreground/90 hover:text-accent hover:bg-accent/10 hover:backdrop-blur-lg transition-all duration-300 hover:translate-x-2"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="block px-4 py-3 text-foreground hover:text-accent hover:bg-muted transition-colors"
               >
                 {link.name}
               </a>
@@ -107,7 +105,7 @@ const Navbar = () => {
             <div className="px-4 pt-2">
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="w-full bg-background/30 backdrop-blur-md border border-accent/30 text-accent hover:bg-accent/20 hover:border-accent hover:shadow-glow transition-all duration-300"
+                className="w-full bg-gradient-accent hover:shadow-glow transition-all duration-300"
               >
                 Get Quote
               </Button>
