@@ -102,54 +102,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-scale-in">
-            <form onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 shadow-soft space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Full Name *
-                </label>
-                <Input type="text" required value={formData.name} onChange={e => setFormData({
-                ...formData,
-                name: e.target.value
-              })} placeholder="Enter your name" className="w-full" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Email Address *
-                </label>
-                <Input type="email" required value={formData.email} onChange={e => setFormData({
-                ...formData,
-                email: e.target.value
-              })} placeholder="your@email.com" className="w-full" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Phone Number *
-                </label>
-                <Input type="tel" required value={formData.phone} onChange={e => setFormData({
-                ...formData,
-                phone: e.target.value
-              })} placeholder="+91 12345 67890" className="w-full" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Message *
-                </label>
-                <Textarea required value={formData.message} onChange={e => setFormData({
-                ...formData,
-                message: e.target.value
-              })} placeholder="Tell us about your project..." className="w-full min-h-32" />
-              </div>
-
-              <Button type="submit" className="w-full bg-gradient-accent hover:shadow-glow transition-all duration-300 py-6 text-lg group">
-                Send Message
-                <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </form>
-          </div>
+          
         </div>
       </div>
     </section>;
