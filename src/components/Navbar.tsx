@@ -71,7 +71,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button
-              onClick={() => window.open("https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
+              onClick={() => window.open("https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
               className="bg-[#25D366] hover:bg-[#20BA59] text-white border-none hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="mr-2" size={18} />
@@ -107,7 +107,7 @@ const Navbar = () => {
             ))}
             <div className="px-4 pt-2">
               <Button
-                onClick={() => window.open("https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
+                onClick={() => window.open("https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
                 className="w-full bg-[#25D366] hover:bg-[#20BA59] text-white border-none hover:shadow-glow transition-all duration-300"
               >
                 <MessageCircle className="mr-2" size={18} />
