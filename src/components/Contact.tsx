@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/1234567890?text=Hi, I'm interested in your aluminum services", "_blank");
+    window.open("https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank");
   };
 
   return (
@@ -95,7 +95,7 @@ const Contact = () => {
               className="w-full bg-[#25D366] hover:bg-[#20BA59] text-white py-6 text-lg"
             >
               <Phone className="mr-2" />
-              WhatsApp Us
+              Chat on WhatsApp
             </Button>
 
             {/* Map */}
