@@ -47,8 +47,8 @@ const Hero = () => {
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Button>
             
-            <Button onClick={scrollToAbout} size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 backdrop-blur-sm">
-              Learn More
+            <Button onClick={scrollToContact} size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 backdrop-blur-sm">
+              Contact Us
             </Button>
           </div>
         </div>
