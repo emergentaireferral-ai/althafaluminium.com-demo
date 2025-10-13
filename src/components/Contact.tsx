@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank");
+    window.open('https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
 
   return (
