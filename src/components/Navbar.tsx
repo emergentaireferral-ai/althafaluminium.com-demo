@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -71,10 +71,11 @@ const Navbar = () => {
               </a>
             ))}
             <Button
-              onClick={() => scrollToSection("#contact")}
-              className="bg-background/20 backdrop-blur-md border border-accent/30 text-accent hover:bg-accent/20 hover:border-accent hover:shadow-glow transition-all duration-300 hover:scale-105"
+              onClick={() => window.open("https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
+              className="bg-[#25D366] hover:bg-[#20BA59] text-white border-none hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              Get Quote
+              <MessageCircle className="mr-2" size={18} />
+              Chat on WhatsApp
             </Button>
           </div>
 
@@ -106,10 +107,11 @@ const Navbar = () => {
             ))}
             <div className="px-4 pt-2">
               <Button
-                onClick={() => scrollToSection("#contact")}
-                className="w-full bg-background/30 backdrop-blur-md border border-accent/30 text-accent hover:bg-accent/20 hover:border-accent hover:shadow-glow transition-all duration-300"
+                onClick={() => window.open("https://wa.me/919876543210?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services", "_blank")}
+                className="w-full bg-[#25D366] hover:bg-[#20BA59] text-white border-none hover:shadow-glow transition-all duration-300"
               >
-                Get Quote
+                <MessageCircle className="mr-2" size={18} />
+                Chat on WhatsApp
               </Button>
             </div>
           </div>
