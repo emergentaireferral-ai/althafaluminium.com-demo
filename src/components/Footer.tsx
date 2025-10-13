@@ -1,32 +1,32 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const services = [
-    "Aluminum Partitions",
-    "False Ceilings",
-    "Glass & Door Frames",
-    "Office Cabin Fabrication",
-  ];
-
+  const quickLinks = [{
+    name: "Home",
+    href: "#home"
+  }, {
+    name: "About",
+    href: "#about"
+  }, {
+    name: "Services",
+    href: "#services"
+  }, {
+    name: "Portfolio",
+    href: "#portfolio"
+  }, {
+    name: "Contact",
+    href: "#contact"
+  }];
+  const services = ["Aluminum Partitions", "False Ceilings", "Glass & Door Frames", "Office Cabin Fabrication"];
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -38,22 +38,13 @@ const Footer = () => {
               Transforming spaces with premium aluminum partitions, false ceilings, and glass works for over 10 years.
             </p>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -63,20 +54,14 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(link.href);
-                    }}
-                    className="text-white/70 hover:text-accent transition-colors"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <a href={link.href} onClick={e => {
+                e.preventDefault();
+                scrollToSection(link.href);
+              }} className="text-white/70 hover:text-accent transition-colors">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -84,11 +69,9 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Our Services</h4>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service} className="text-white/70">
+              {services.map(service => <li key={service} className="text-white/70">
                   {service}
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -98,15 +81,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <a href="tel:+1234567890" className="text-white/70 hover:text-accent transition-colors">
-                  +91 12345 67890
-                </a>
+                <a href="tel:+1234567890" className="text-white/70 hover:text-accent transition-colors">+91 7358403185</a>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@althafaluminium.com" className="text-white/70 hover:text-accent transition-colors">
-                  info@althafaluminium.com
-                </a>
+                <a href="mailto:info@althafaluminium.com" className="text-white/70 hover:text-accent transition-colors">infalthafaluminiumo@.com</a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -136,8 +115,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
