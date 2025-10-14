@@ -1,123 +1,215 @@
-import { useState } from "react";
-import { X } from "lucide-react";
+import { motion } from "framer-motion";
+import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import serviceCabin from "@/assets/service-cabin.jpg";
+import serviceCeiling from "@/assets/service-ceiling.jpg";
+import serviceGlass from "@/assets/service-glass.jpg";
+import servicePartitions from "@/assets/service-partitions.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 
 const Portfolio = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
-  const projects = [
+  const categories = [
     {
-      title: "Corporate Office - Tech Park",
-      category: "Office Partitions",
-      image: project1,
-      description: "Complete office partitioning solution with glass and aluminum for a modern tech company. Features include soundproof cabins and open workspace divisions.",
+      title: "Aluminum Partitions",
+      description: "Modern aluminum partition systems for offices and commercial spaces",
+      image: servicePartitions,
+      icon: Building2,
     },
     {
-      title: "Luxury Residence - Villa Interior",
-      category: "False Ceiling",
-      image: project2,
-      description: "Elegant false ceiling installation with integrated lighting system for a premium residential project. Custom design with modern aesthetics.",
+      title: "Factory False Ceilings",
+      description: "Industrial-grade false ceiling solutions for manufacturing facilities",
+      image: serviceCeiling,
+      icon: Factory,
     },
     {
-      title: "Commercial Complex - Retail Space",
-      category: "Glass & Aluminum",
-      image: project3,
-      description: "Contemporary glass partition and door systems for a high-end retail complex. Featuring frameless glass and premium aluminum finishing.",
+      title: "Office Partitions",
+      description: "Professional workspace divisions with soundproof and glass options",
+      image: serviceCabin,
+      icon: Briefcase,
+    },
+    {
+      title: "Gypsum Ceilings",
+      description: "Elegant gypsum ceiling designs with integrated lighting systems",
+      image: serviceCeiling,
+      icon: Frame,
+    },
+    {
+      title: "Industrial Installations",
+      description: "Heavy-duty aluminum installations for industrial environments",
+      image: serviceGlass,
+      icon: Settings,
+    },
+    {
+      title: "Custom Designs",
+      description: "Bespoke aluminum solutions tailored to your unique requirements",
+      image: servicePartitions,
+      icon: Sparkles,
     },
   ];
 
-  return (
-    <section id="portfolio" className="py-20 bg-muted">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-            Our <span className="text-gradient-accent">Portfolio</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our recent projects and craftsmanship
-          </p>
-        </div>
+  const galleryProjects = [
+    { image: project1, title: "Corporate Office Project" },
+    { image: project2, title: "Luxury Villa Interior" },
+    { image: project3, title: "Commercial Complex" },
+  ];
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              onClick={() => setSelectedProject(index)}
-              className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Image */}
-              <div className="relative h-80 overflow-hidden">
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6">
+              Our Work & <span className="text-gradient-accent">Projects</span>
+            </h1>
+            <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-8" />
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Explore our aluminum partitions and false ceiling designs for modern spaces
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Category Grid Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              Project <span className="text-gradient-accent">Categories</span>
+            </h2>
+            <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Specialized solutions across diverse sectors and applications
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {categories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer h-full">
+                    <div className="relative h-48 md:h-64 overflow-hidden">
+                      <img
+                        src={category.image}
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                      
+                      <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
+                        <div className="bg-accent/20 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                        </div>
+                        <h3 className="text-white text-lg md:text-xl font-heading font-semibold mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-white/90 text-xs md:text-sm leading-relaxed">
+                          {category.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Gallery Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              Featured <span className="text-gradient-accent">Projects</span>
+            </h2>
+            <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our recent completed installations and satisfied clients
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {galleryProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className="overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 cursor-pointer"
+              >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-72 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-accent text-sm font-medium mb-2">
-                    {project.category}
-                  </span>
-                  <h3 className="text-white text-2xl font-heading font-semibold">
-                    {project.title}
-                  </h3>
-                  <p className="text-white/80 mt-2 text-sm">
-                    Click to view details
-                  </p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Lightbox Modal */}
-        {selectedProject !== null && (
-          <div
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 animate-fade-in"
-            onClick={() => setSelectedProject(null)}
-          >
-            <div
-              className="relative max-w-4xl w-full bg-background rounded-2xl overflow-hidden shadow-strong animate-scale-in"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-10 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-background transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-
-              <div className="grid md:grid-cols-2">
-                <img
-                  src={projects[selectedProject].image}
-                  alt={projects[selectedProject].title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="p-8 space-y-4">
-                  <span className="text-accent text-sm font-medium">
-                    {projects[selectedProject].category}
-                  </span>
-                  <h3 className="text-3xl font-heading font-bold text-foreground">
-                    {projects[selectedProject].title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {projects[selectedProject].description}
-                  </p>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
-        )}
-      </div>
-    </section>
+        </div>
+      </section>
+
+      {/* Call-to-Action Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
+              Ready to Start Your <span className="text-gradient-accent">Project?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              Get in touch with us today and let's bring your vision to life with premium aluminum solutions
+            </p>
+            <Button
+              onClick={handleWhatsApp}
+              size="lg"
+              className="text-lg px-8 py-6 rounded-full shadow-strong hover:shadow-xl hover:scale-105 transition-all duration-300"
+            >
+              Contact Us on WhatsApp
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 
