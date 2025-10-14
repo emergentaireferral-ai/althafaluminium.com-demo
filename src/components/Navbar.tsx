@@ -15,20 +15,20 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Portfolio", href: "/portfolio" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+  const handleNavClick = (href: string) => {
+    if (href.startsWith("/")) {
+      window.location.href = href;
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -43,11 +43,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#home");
-            }}
+            href="/"
             className="text-2xl font-heading font-bold text-gradient-metallic hover:scale-110 hover:rotate-1 transition-all duration-300 cursor-pointer"
           >
             Althaf Aluminium
@@ -61,7 +57,7 @@ const Navbar = () => {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(link.href);
+                  handleNavClick(link.href);
                 }}
                 className="text-foreground/90 hover:text-accent font-medium transition-all duration-300 relative group hover:scale-110"
               >
@@ -97,7 +93,7 @@ const Navbar = () => {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(link.href);
+                  handleNavClick(link.href);
                 }}
                 className="block px-4 py-3 text-foreground/90 hover:text-accent hover:bg-accent/10 hover:backdrop-blur-lg transition-all duration-300 hover:translate-x-2"
                 style={{ animationDelay: `${index * 50}ms` }}
