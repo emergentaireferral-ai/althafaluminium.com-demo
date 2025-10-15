@@ -13,40 +13,40 @@ import project3 from "@/assets/project-3.jpg";
 const Portfolio = () => {
   const categories = [
     {
-      title: "Aluminum Partitions",
-      description: "Modern aluminum partition systems for offices and commercial spaces",
+      title: "Butterfly Lovers Collection",
+      description: "Elegant designs inspired by the timeless tale of romance and transformation",
       image: servicePartitions,
-      icon: Building2,
+      icon: Sparkles,
     },
     {
-      title: "Factory False Ceilings",
-      description: "Industrial-grade false ceiling solutions for manufacturing facilities",
-      image: serviceCeiling,
-      icon: Factory,
-    },
-    {
-      title: "Office Partitions",
-      description: "Professional workspace divisions with soundproof and glass options",
-      image: serviceCabin,
-      icon: Briefcase,
-    },
-    {
-      title: "Gypsum Ceilings",
-      description: "Elegant gypsum ceiling designs with integrated lighting systems",
+      title: "Garden Dreams",
+      description: "Beautiful butterfly-themed spaces that bring nature indoors",
       image: serviceCeiling,
       icon: Frame,
     },
     {
-      title: "Industrial Installations",
-      description: "Heavy-duty aluminum installations for industrial environments",
-      image: serviceGlass,
-      icon: Settings,
+      title: "Wings of Love",
+      description: "Romantic partition designs featuring delicate butterfly motifs",
+      image: serviceCabin,
+      icon: Building2,
     },
     {
-      title: "Custom Designs",
-      description: "Bespoke aluminum solutions tailored to your unique requirements",
+      title: "Ethereal Elegance",
+      description: "Graceful ceiling installations with butterfly-inspired patterns",
+      image: serviceCeiling,
+      icon: Factory,
+    },
+    {
+      title: "Nature's Romance",
+      description: "Custom glass designs celebrating the beauty of butterfly lovers",
+      image: serviceGlass,
+      icon: Briefcase,
+    },
+    {
+      title: "Bespoke Butterfly",
+      description: "Personalized designs capturing the essence of love and freedom",
       image: servicePartitions,
-      icon: Sparkles,
+      icon: Settings,
     },
   ];
 
