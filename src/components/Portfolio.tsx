@@ -6,9 +6,9 @@ import serviceCabin from "@/assets/service-cabin.jpg";
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
 import servicePartitions from "@/assets/service-partitions.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/office-partition-glass.png";
-import project3 from "@/assets/luxury-false-ceiling.png";
+import project1 from "@/assets/office-glass-partition.png";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
 
 const Portfolio = () => {
   const categories = [
