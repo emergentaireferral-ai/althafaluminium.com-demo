@@ -5,7 +5,7 @@ const About = () => {
   const stats = [
     {
       icon: Clock,
-      value: "10+",
+      value: "15+",
       label: "Years Experience",
     },
     {
