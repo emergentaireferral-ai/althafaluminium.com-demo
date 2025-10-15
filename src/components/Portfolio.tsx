@@ -179,6 +179,23 @@ const Portfolio = () => {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center mt-12"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-strong hover:scale-105 transition-all duration-300"
+            >
+              View Full Photo Gallery
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </motion.div>
         </div>
       </section>
 
