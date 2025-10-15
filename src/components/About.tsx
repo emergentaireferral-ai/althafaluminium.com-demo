@@ -1,5 +1,5 @@
 import { Award, Users, Clock, Target } from "lucide-react";
-import aboutTeam from "@/assets/about-team.jpg";
+import aboutOfficePartition from "@/assets/about-office-partition.jpg";
 
 const About = () => {
   const stats = [
@@ -33,8 +33,8 @@ const About = () => {
           <div className="relative animate-fade-in">
             <div className="relative rounded-2xl overflow-hidden shadow-strong">
               <img
-                src={aboutTeam}
-                alt="Althaf Aluminium Team"
+                src={aboutOfficePartition}
+                alt="Modern aluminum office partition installation by Althaf Aluminium"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
