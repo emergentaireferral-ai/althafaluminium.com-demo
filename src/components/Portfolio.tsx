@@ -180,9 +180,9 @@ const Portfolio = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               Get in touch with us today and let's bring your vision to life with premium aluminum solutions
             </p>
-            <Button onClick={handleWhatsApp} size="lg" className="text-lg px-8 py-6 rounded-full shadow-strong hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <Button onClick={handleWhatsApp} size="lg" className="text-lg px-8 py-6 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-strong hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 hover:rotate-1 hover:-translate-y-1">
               Contact Us on WhatsApp
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
         </div>
