@@ -54,6 +54,12 @@ const Portfolio = () => {
     { image: project1, title: "Corporate Office Project" },
     { image: project2, title: "Luxury Villa Interior" },
     { image: project3, title: "Commercial Complex" },
+    { image: project1, title: "Office Partition Installation" },
+    { image: project2, title: "Modern Workspace Design" },
+    { image: project3, title: "Industrial Facility" },
+    { image: project1, title: "Retail Space Partitions" },
+    { image: project2, title: "Executive Office Suite" },
+    { image: project3, title: "Manufacturing Plant Ceiling" },
   ];
 
   const handleWhatsApp = () => {
