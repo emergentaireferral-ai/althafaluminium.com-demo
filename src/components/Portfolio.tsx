@@ -78,6 +78,16 @@ const Portfolio = () => {
     serviceGlass,
     servicePartitions,
     project1,
+    project2,
+    project3,
+    aboutOfficePartition,
+    serviceCabin,
+    serviceCeiling,
+    serviceGlass,
+    servicePartitions,
+    project1,
+    project2,
+    project3,
   ];
 
   const handleWhatsApp = () => {
