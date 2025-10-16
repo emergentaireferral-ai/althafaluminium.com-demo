@@ -11,115 +11,55 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/office-partition-modern.png";
 import project3 from "@/assets/project-3.jpg";
 import aboutOfficePartition from "@/assets/about-office-partition.jpg";
-
 const Portfolio = () => {
-  const categories = [
-    {
-      title: "Aluminum Partitions",
-      description: "Modern aluminum partition systems for offices and commercial spaces",
-      image: servicePartitions,
-      icon: Building2,
-    },
-    {
-      title: "Factory False Ceilings",
-      description: "Industrial-grade false ceiling solutions for manufacturing facilities",
-      image: serviceCeiling,
-      icon: Factory,
-    },
-    {
-      title: "Office Partitions",
-      description: "Professional workspace divisions with soundproof and glass options",
-      image: serviceCabin,
-      icon: Briefcase,
-    },
-    {
-      title: "Gypsum Ceilings",
-      description: "Elegant gypsum ceiling designs with integrated lighting systems",
-      image: serviceCeiling,
-      icon: Frame,
-    },
-    {
-      title: "Industrial Installations",
-      description: "Heavy-duty aluminum installations for industrial environments",
-      image: serviceGlass,
-      icon: Settings,
-    },
-    {
-      title: "Custom Designs",
-      description: "Bespoke aluminum solutions tailored to your unique requirements",
-      image: servicePartitions,
-      icon: Sparkles,
-    },
-  ];
-
-  const galleryImages = [
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-    project3,
-    aboutOfficePartition,
-    serviceCabin,
-    serviceCeiling,
-    serviceGlass,
-    servicePartitions,
-    project1,
-    project2,
-  ];
-
+  const categories = [{
+    title: "Aluminum Partitions",
+    description: "Modern aluminum partition systems for offices and commercial spaces",
+    image: servicePartitions,
+    icon: Building2
+  }, {
+    title: "Factory False Ceilings",
+    description: "Industrial-grade false ceiling solutions for manufacturing facilities",
+    image: serviceCeiling,
+    icon: Factory
+  }, {
+    title: "Office Partitions",
+    description: "Professional workspace divisions with soundproof and glass options",
+    image: serviceCabin,
+    icon: Briefcase
+  }, {
+    title: "Gypsum Ceilings",
+    description: "Elegant gypsum ceiling designs with integrated lighting systems",
+    image: serviceCeiling,
+    icon: Frame
+  }, {
+    title: "Industrial Installations",
+    description: "Heavy-duty aluminum installations for industrial environments",
+    image: serviceGlass,
+    icon: Settings
+  }, {
+    title: "Custom Designs",
+    description: "Bespoke aluminum solutions tailored to your unique requirements",
+    image: servicePartitions,
+    icon: Sparkles
+  }];
+  const galleryImages = [project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6">
               Our Work & <span className="text-gradient-accent">Projects</span>
             </h1>
@@ -134,13 +74,17 @@ const Portfolio = () => {
       {/* Category Grid Section */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6
+        }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
               Project <span className="text-gradient-accent">Categories</span>
             </h2>
@@ -152,22 +96,22 @@ const Portfolio = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {categories.map((category, index) => {
-              const Icon = category.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
+            const Icon = category.icon;
+            return <motion.div key={index} initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.5,
+              delay: index * 0.1
+            }}>
                   <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer h-full">
                     <div className="relative h-48 md:h-64 overflow-hidden">
-                      <img
-                        src={category.image}
-                        alt={category.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
+                      <img src={category.image} alt={category.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                       
                       <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
@@ -183,9 +127,8 @@ const Portfolio = () => {
                       </div>
                     </div>
                   </Card>
-                </motion.div>
-              );
-            })}
+                </motion.div>;
+          })}
           </div>
         </div>
       </section>
@@ -193,36 +136,23 @@ const Portfolio = () => {
       {/* Project Gallery Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Featured <span className="text-gradient-accent">Projects</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our recent completed installations and satisfied clients
-            </p>
-          </motion.div>
+          
 
           <ParallaxScroll images={galleryImages} />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center mt-12"
-          >
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-strong hover:scale-105 transition-all duration-300"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.3
+        }} className="text-center mt-12">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-strong hover:scale-105 transition-all duration-300">
               View Full Photo Gallery
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -233,32 +163,30 @@ const Portfolio = () => {
       {/* Call-to-Action Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6
+        }} className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Ready to Start Your <span className="text-gradient-accent">Project?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               Get in touch with us today and let's bring your vision to life with premium aluminum solutions
             </p>
-            <Button
-              onClick={handleWhatsApp}
-              size="lg"
-              className="text-lg px-8 py-6 rounded-full shadow-strong hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
+            <Button onClick={handleWhatsApp} size="lg" className="text-lg px-8 py-6 rounded-full shadow-strong hover:shadow-xl hover:scale-105 transition-all duration-300">
               Contact Us on WhatsApp
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Portfolio;
