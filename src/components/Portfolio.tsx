@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Building2, Factory, Briefcase, Frame, Settings, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import serviceCabin from "@/assets/service-cabin.jpg";
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
@@ -9,6 +10,7 @@ import servicePartitions from "@/assets/service-partitions.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/office-partition-modern.png";
 import project3 from "@/assets/project-3.jpg";
+import aboutOfficePartition from "@/assets/about-office-partition.jpg";
 
 const Portfolio = () => {
   const categories = [
@@ -50,16 +52,22 @@ const Portfolio = () => {
     },
   ];
 
-  const galleryProjects = [
-    { image: project1, title: "Corporate Office Project" },
-    { image: project2, title: "Luxury Villa Interior" },
-    { image: project3, title: "Commercial Complex" },
-    { image: project1, title: "Office Partition Installation" },
-    { image: project2, title: "Modern Workspace Design" },
-    { image: project3, title: "Industrial Facility" },
-    { image: project1, title: "Retail Space Partitions" },
-    { image: project2, title: "Executive Office Suite" },
-    { image: project3, title: "Manufacturing Plant Ceiling" },
+  const galleryImages = [
+    project1,
+    project2,
+    project3,
+    aboutOfficePartition,
+    serviceCabin,
+    serviceCeiling,
+    serviceGlass,
+    servicePartitions,
+    project1,
+    project2,
+    project3,
+    aboutOfficePartition,
+    serviceCabin,
+    serviceCeiling,
+    serviceGlass,
   ];
 
   const handleWhatsApp = () => {
@@ -155,7 +163,7 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-4">
               Featured <span className="text-gradient-accent">Projects</span>
@@ -166,25 +174,7 @@ const Portfolio = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 cursor-pointer"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-72 object-cover"
-                />
-              </motion.div>
-            ))}
-          </div>
+          <ParallaxScroll images={galleryImages} />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
