@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,11 +17,6 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Portfolio", href: "/portfolio" },
-  ];
-
-  const words = [
-    { text: "Althaf" },
-    { text: "Aluminium", className: "text-accent" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -47,16 +41,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with Typewriter Effect */}
+          {/* Logo */}
           <a
             href="/"
-            className="hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="text-2xl font-heading font-bold text-gradient-metallic hover:scale-110 hover:rotate-1 transition-all duration-300 cursor-pointer"
           >
-            <TypewriterEffectSmooth 
-              words={words} 
-              className="my-0"
-              cursorClassName="bg-accent"
-            />
+            Althaf Aluminium
           </a>
 
           {/* Desktop Navigation */}
