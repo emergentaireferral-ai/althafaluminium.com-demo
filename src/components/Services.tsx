@@ -7,28 +7,28 @@ import serviceCabin from "@/assets/service-cabin.jpg";
 const Services = () => {
   const services = [
     {
-      title: "Aluminum Partitions",
-      description: "Modern, durable partitions for offices and homes. Create functional spaces with sleek designs.",
+      title: "Aluminium Partition Works",
+      description: "Transform your workspace with premium aluminium partition systems. Our durable, modern partitions create flexible office layouts while maintaining professional aesthetics. Perfect for commercial spaces, factories, and offices requiring efficient space management.",
       image: servicePartitions,
-      features: ["Sound Insulation", "Custom Designs", "Easy Maintenance"],
+      features: ["Superior Sound Insulation", "Customizable Designs", "Low Maintenance & Long-Lasting"],
     },
     {
-      title: "False Ceilings",
-      description: "Elegant ceiling solutions with integrated lighting. Transform your interior aesthetics.",
+      title: "False Ceiling Installation",
+      description: "Elevate your interiors with expertly crafted false ceiling solutions. Our installations combine aesthetic appeal with functional benefits including improved acoustics, thermal insulation, and integrated lighting systems. Ideal for modern office environments and commercial spaces.",
       image: serviceCeiling,
-      features: ["Modern Lighting", "Thermal Insulation", "Acoustic Control"],
+      features: ["Energy-Efficient Designs", "Enhanced Acoustics", "Integrated LED Solutions"],
     },
     {
-      title: "Glass & Door Frames",
-      description: "Premium glass installations with aluminum framing. Perfect for modern architectural designs.",
+      title: "Glass Partitions & Framing",
+      description: "Create stunning, light-filled spaces with our premium glass partition solutions. Featuring high-grade tempered glass and sleek aluminium frames, our installations deliver modern sophistication while maximizing natural light and maintaining privacy for offices and commercial buildings.",
       image: serviceGlass,
-      features: ["Tempered Glass", "Sliding Systems", "Weather Resistant"],
+      features: ["Premium Tempered Glass", "Space Optimization", "Contemporary Aesthetics"],
     },
     {
-      title: "Office Cabin Fabrication",
-      description: "Complete office cabin solutions with glass and aluminum. Professional workspace design.",
+      title: "Office Cabin Design & Fabrication",
+      description: "Complete office cabin solutions tailored for factories and commercial spaces. Our expert fabrication combines glass and aluminium to create professional, functional workspaces. We deliver turnkey solutions with rapid installation and flexible layouts to meet your business needs.",
       image: serviceCabin,
-      features: ["Complete Systems", "Quick Installation", "Flexible Layouts"],
+      features: ["Turnkey Solutions", "On-Time Project Delivery", "Cost-Effective Designs"],
     },
   ];
 
@@ -41,8 +41,8 @@ const Services = () => {
             Our <span className="text-gradient-accent">Services</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-accent rounded-full mx-auto mb-6" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive aluminum solutions for residential and commercial spaces
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Althaf Aluminium delivers professional aluminium partition work, false ceiling contractors, glass partitions, and office cabin design for industrial interiors. We specialize in durable, cost-effective solutions with guaranteed on-time project delivery across all commercial and factory installations.
           </p>
         </div>
 
@@ -87,6 +87,32 @@ const Services = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16 animate-fade-in">
+          <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-background rounded-2xl p-8 md:p-12 border border-primary/20">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
+              Ready to Transform Your Space?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Get expert consultation and a free estimate for your aluminium partition, false ceiling, or glass installation project. Our team delivers modern aluminium solutions with guaranteed quality and timely completion.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="#contact" 
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary hover:bg-primary/90 rounded-full shadow-strong hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                Get a Free Estimate Today
+              </a>
+              <a 
+                href="tel:+1234567890" 
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary bg-background border-2 border-primary hover:bg-primary/5 rounded-full transition-all duration-300"
+              >
+                Call Us Now
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
