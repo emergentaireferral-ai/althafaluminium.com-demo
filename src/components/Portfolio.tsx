@@ -11,6 +11,16 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/office-partition-modern.png";
 import project3 from "@/assets/project-3.jpg";
 import aboutOfficePartition from "@/assets/about-office-partition.jpg";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
+import portfolio7 from "@/assets/portfolio-7.jpg";
+import portfolio8 from "@/assets/portfolio-8.jpg";
+import portfolio9 from "@/assets/portfolio-9.jpg";
+import portfolio10 from "@/assets/portfolio-10.jpg";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
@@ -43,7 +53,7 @@ const Portfolio = () => {
     image: servicePartitions,
     icon: Sparkles
   }];
-  const galleryImages = [project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2];
+  const galleryImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6, portfolio7, portfolio8, portfolio9, portfolio10, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
