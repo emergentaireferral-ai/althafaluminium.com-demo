@@ -7,6 +7,7 @@ import serviceCabin from "@/assets/service-cabin.jpg";
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
 import servicePartitions from "@/assets/service-partitions.jpg";
+import factoryCeiling from "@/assets/IMG-20251018-WA0076.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/office-partition-modern.png";
 import project3 from "@/assets/project-3.jpg";
@@ -30,7 +31,7 @@ const Portfolio = () => {
   }, {
     title: "Factory False Ceilings",
     description: "Industrial-grade false ceiling solutions for manufacturing facilities",
-    image: serviceCeiling,
+    image: factoryCeiling,
     icon: Factory
   }, {
     title: "Office Partitions",
@@ -82,7 +83,7 @@ const Portfolio = () => {
       </section>
 
       {/* Category Grid Section */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-32 bg-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -104,7 +105,7 @@ const Portfolio = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {categories.map((category, index) => {
             const Icon = category.icon;
             return <motion.div key={index} initial={{
@@ -120,7 +121,7 @@ const Portfolio = () => {
               delay: index * 0.1
             }}>
                   <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-strong transition-all duration-500 cursor-pointer h-full">
-                    <div className="relative h-48 md:h-64 overflow-hidden">
+                    <div className="relative h-64 md:h-80 overflow-hidden">
                       <img src={category.image} alt={category.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                       
