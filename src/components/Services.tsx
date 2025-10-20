@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import servicePartitions from "@/assets/service-partitions.jpg";
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
@@ -32,6 +33,20 @@ const Services = () => {
     },
   ];
 
+  const stickyScrollContent = services.map((service) => ({
+    title: service.title,
+    description: service.description,
+    content: (
+      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-md">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="h-full w-full object-cover"
+        />
+      </div>
+    ),
+  }));
+
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,6 +59,11 @@ const Services = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Althaf Aluminium delivers professional aluminium partition work, false ceiling contractors, glass partitions, and office cabin design for industrial interiors. We specialize in durable, cost-effective solutions with guaranteed on-time project delivery across all commercial and factory installations.
           </p>
+        </div>
+
+        {/* Sticky Scroll Animation */}
+        <div className="mb-16">
+          <StickyScroll content={stickyScrollContent} />
         </div>
 
         {/* Services Grid */}
@@ -62,7 +82,7 @@ const Services = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 {/* Hover Content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <ul className="space-y-2 text-white">
