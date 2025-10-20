@@ -39,14 +39,14 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "#0f172a",
-    "#000000",
-    "#171717",
+    "#e2e8f0",
+    "#f1f5f9",
+    "#cbd5e1",
   ];
   const linearGradients = [
-    "linear-gradient(to bottom right, #06b6d4, #10b981)",
-    "linear-gradient(to bottom right, #ec4899, #6366f1)",
-    "linear-gradient(to bottom right, #f97316, #eab308)",
+    "linear-gradient(to bottom right, #38bdf8, #4ade80)",
+    "linear-gradient(to bottom right, #f472b6, #a78bfa)",
+    "linear-gradient(to bottom right, #fb923c, #facc15)",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
@@ -62,7 +62,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+      className="relative flex h-[75vh] justify-center space-x-10 overflow-y-auto rounded-md p-10"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -76,7 +76,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-100"
+                className="text-2xl font-bold text-slate-900"
               >
                 {item.title}
               </motion.h2>
@@ -87,7 +87,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-slate-300"
+                className="text-kg mt-10 max-w-sm text-slate-700"
               >
                 {item.description}
               </motion.p>
@@ -99,7 +99,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
+          "sticky top-10 hidden h-96 w-[32rem] overflow-hidden rounded-md bg-white lg:block",
           contentClassName,
         )}
       >
