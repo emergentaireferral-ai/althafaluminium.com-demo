@@ -38,39 +38,87 @@ export const ParallaxScroll = ({
             <motion.div
               style={{ y: translateFirst }}
               key={"grid-1" + idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              className="cursor-pointer"
             >
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-center rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="portfolio image"
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+            <motion.div
+              style={{ y: translateSecond }}
+              key={"grid-2" + idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              className="cursor-pointer"
+            >
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-center rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="portfolio image"
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+            <motion.div
+              style={{ y: translateThird }}
+              key={"grid-3" + idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              className="cursor-pointer"
+            >
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-center rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="portfolio image"
               />
             </motion.div>
           ))}

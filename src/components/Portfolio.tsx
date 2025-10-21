@@ -35,6 +35,10 @@ import newPhoto10 from "@/assets/IMG-20251020-WA0019.jpg";
 import newPhoto11 from "@/assets/IMG-20251020-WA0020.jpg";
 import newPhoto12 from "@/assets/IMG-20251020-WA0024.jpg";
 import newPhoto13 from "@/assets/IMG-20251020-WA0025.jpg";
+import newPhoto14 from "@/assets/IMG-20251020-WA0037.jpg";
+import newPhoto15 from "@/assets/WhatsApp Image 2025-10-18 at 22.23.58_f144f512 copy copy.jpg";
+import newPhoto16 from "@/assets/IMG-20251020-WA0034 copy.jpg";
+import newPhoto17 from "@/assets/IMG-20251020-WA0040.jpg";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
@@ -67,7 +71,16 @@ const Portfolio = () => {
     image: servicePartitions,
     icon: Sparkles
   }];
-  const galleryImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6, portfolio7, portfolio8, portfolio9, portfolio10, newPhoto1, newPhoto2, newPhoto3, newPhoto4, newPhoto5, newPhoto6, newPhoto7, newPhoto8, newPhoto9, newPhoto10, newPhoto11, newPhoto12, newPhoto13, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2];
+  const galleryImages = [
+    portfolio1, portfolio2, portfolio3, portfolio4, portfolio5,
+    portfolio6, portfolio7, portfolio8, portfolio9, portfolio10,
+    newPhoto1, newPhoto2, newPhoto3, newPhoto4, newPhoto5,
+    newPhoto6, newPhoto7, newPhoto8, newPhoto9, newPhoto10,
+    newPhoto11, newPhoto12, newPhoto13, newPhoto14, newPhoto15,
+    newPhoto16, newPhoto17, factoryCeiling, project1, project2,
+    project3, aboutOfficePartition, serviceCabin, serviceCeiling,
+    serviceGlass, servicePartitions
+  ];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
