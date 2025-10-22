@@ -42,7 +42,6 @@ import newPhoto17 from "@/assets/IMG-20251020-WA0044.jpg";
 import newPhoto18 from "@/assets/IMG-20251018-WA0003.jpg";
 import newPhoto19 from "@/assets/IMG-20251018-WA0008.jpg";
 import recentPhoto1 from "@/assets/IMG-20251021-WA0030.jpg";
-import recentPhoto2 from "@/assets/IMG-20251021-WA0032.jpg";
 import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
 import recentPhoto4 from "@/assets/IMG-20251021-WA0042.jpg";
 import recentPhoto5 from "@/assets/IMG-20251021-WA0044.jpg";
@@ -80,7 +79,6 @@ const Portfolio = () => {
   }];
   const galleryImages = [
     recentPhoto1,
-    recentPhoto2,
     recentPhoto3,
     recentPhoto4,
     recentPhoto5,
