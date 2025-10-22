@@ -35,6 +35,17 @@ import newPhoto10 from "@/assets/IMG-20251020-WA0019.jpg";
 import newPhoto11 from "@/assets/IMG-20251020-WA0020.jpg";
 import newPhoto12 from "@/assets/IMG-20251020-WA0024.jpg";
 import newPhoto13 from "@/assets/IMG-20251020-WA0025.jpg";
+import newPhoto14 from "@/assets/IMG-20251020-WA0031.jpg";
+import newPhoto15 from "@/assets/IMG-20251020-WA0032.jpg";
+import newPhoto16 from "@/assets/IMG-20251020-WA0034.jpg";
+import newPhoto17 from "@/assets/IMG-20251020-WA0044.jpg";
+import newPhoto18 from "@/assets/IMG-20251018-WA0003.jpg";
+import newPhoto19 from "@/assets/IMG-20251018-WA0008.jpg";
+import recentPhoto1 from "@/assets/IMG-20251021-WA0030.jpg";
+import recentPhoto2 from "@/assets/IMG-20251021-WA0032.jpg";
+import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
+import recentPhoto4 from "@/assets/IMG-20251021-WA0042.jpg";
+import recentPhoto5 from "@/assets/IMG-20251021-WA0044.jpg";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
@@ -67,7 +78,51 @@ const Portfolio = () => {
     image: servicePartitions,
     icon: Sparkles
   }];
-  const galleryImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6, portfolio7, portfolio8, portfolio9, portfolio10, newPhoto1, newPhoto2, newPhoto3, newPhoto4, newPhoto5, newPhoto6, newPhoto7, newPhoto8, newPhoto9, newPhoto10, newPhoto11, newPhoto12, newPhoto13, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2, project3, aboutOfficePartition, serviceCabin, serviceCeiling, serviceGlass, servicePartitions, project1, project2];
+  const galleryImages = [
+    recentPhoto1,
+    recentPhoto2,
+    recentPhoto3,
+    recentPhoto4,
+    recentPhoto5,
+    portfolio1,
+    portfolio2,
+    portfolio3,
+    portfolio4,
+    portfolio5,
+    portfolio6,
+    portfolio7,
+    portfolio8,
+    portfolio9,
+    portfolio10,
+    newPhoto1,
+    newPhoto2,
+    newPhoto3,
+    newPhoto4,
+    newPhoto5,
+    newPhoto6,
+    newPhoto7,
+    newPhoto8,
+    newPhoto9,
+    newPhoto10,
+    newPhoto11,
+    newPhoto12,
+    newPhoto13,
+    newPhoto14,
+    newPhoto15,
+    newPhoto16,
+    newPhoto17,
+    newPhoto18,
+    newPhoto19,
+    project1,
+    project2,
+    project3,
+    aboutOfficePartition,
+    serviceCabin,
+    serviceCeiling,
+    serviceGlass,
+    servicePartitions,
+    factoryCeiling
+  ];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917358403185?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services', '_blank');
   };
