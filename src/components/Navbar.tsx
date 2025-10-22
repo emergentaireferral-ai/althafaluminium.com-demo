@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/IMG-20251018-WA0008.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,9 +45,16 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="/"
-            className="text-2xl font-heading font-bold text-gradient-metallic hover:scale-110 hover:rotate-1 transition-all duration-300 cursor-pointer"
+            className="flex items-center gap-3 hover:scale-105 transition-all duration-300 cursor-pointer group"
           >
-            Althaf Aluminium
+            <img
+              src={logo}
+              alt="Althaf Aluminium Logo"
+              className="w-12 h-12 object-contain group-hover:rotate-3 transition-transform duration-300"
+            />
+            <span className="text-2xl font-heading font-bold text-gradient-metallic">
+              Althaf Aluminium
+            </span>
           </a>
 
           {/* Desktop Navigation */}
