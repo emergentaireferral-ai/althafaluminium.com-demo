@@ -45,6 +45,7 @@ import recentPhoto1 from "@/assets/IMG-20251021-WA0030.jpg";
 import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
 import recentPhoto4 from "@/assets/IMG-20251021-WA0042.jpg";
 import recentPhoto5 from "@/assets/IMG-20251021-WA0044.jpg";
+import butterflyLouver from "@/assets/IMG-20251021-WA0030 copy.jpg";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
@@ -62,9 +63,9 @@ const Portfolio = () => {
     image: serviceCabin,
     icon: Briefcase
   }, {
-    title: "Gypsum Ceilings",
-    description: "Elegant gypsum ceiling designs with integrated lighting systems",
-    image: serviceCeiling,
+    title: "Butterfly Louver Partition",
+    description: "Decorative room divider with horizontal louvers for light flow and stylish separation",
+    image: butterflyLouver,
     icon: Frame
   }, {
     title: "Industrial Installations",
