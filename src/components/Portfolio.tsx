@@ -63,7 +63,7 @@ const Portfolio = () => {
     image: serviceCabin,
     icon: Briefcase
   }, {
-    title: "Glass Partitions",
+    title: "Butterfly Louver Partition",
     description: "Decorative room divider with horizontal louvers for light flow and stylish separation",
     image: butterflyLouver,
     icon: Frame
