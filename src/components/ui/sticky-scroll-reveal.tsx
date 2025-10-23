@@ -64,13 +64,13 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-[75vh] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+      className="relative flex flex-col lg:flex-row h-auto lg:h-[75vh] justify-center lg:space-x-10 overflow-y-auto rounded-md p-4 lg:p-10"
       ref={ref}
     >
-      <div className="relative flex items-start px-4">
-        <div className="max-w-2xl">
+      <div className="relative flex items-start px-4 w-full lg:w-auto">
+        <div className="max-w-2xl w-full">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-10 lg:my-20">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -89,18 +89,35 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-slate-700"
+                className="text-kg mt-4 lg:mt-10 max-w-sm text-slate-700"
               >
                 {item.description}
               </motion.p>
+              {/* Mobile Image */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                style={{ background: backgroundGradient }}
+                className={cn(
+                  "mt-6 h-64 w-full overflow-hidden rounded-md bg-white lg:hidden",
+                  contentClassName,
+                )}
+              >
+                {content[index].content ?? null}
+              </motion.div>
             </div>
           ))}
         </div>
       </div>
+      {/* Desktop Sticky Image */}
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-96 w-[32rem] overflow-hidden rounded-md bg-white lg:block",
+          "sticky top-10 hidden h-96 w-[32rem] overflow-hidden rounded-md bg-white lg:block flex-shrink-0",
           contentClassName,
         )}
       >
