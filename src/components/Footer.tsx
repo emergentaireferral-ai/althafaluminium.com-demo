@@ -139,8 +139,8 @@ const Footer = () => {
                 <div>
                   <p className="text-xs text-white/60 mb-1">Location</p>
                   <p className="text-white/90">
-                    123 Industrial Area<br />
-                    City Name, State - 123456
+                    16/2 Perumal Kovil 2nd Street,<br />
+                    Virugambakkam, Chennai-92
                   </p>
                 </div>
               </div>
