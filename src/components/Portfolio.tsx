@@ -196,7 +196,7 @@ const Portfolio = () => {
                         <div className="bg-accent/20 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                           <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                         </div>
-                        <h3 className="text-white text-lg md:text-xl font-heading font-semibold mb-2">
+                        <h3 className="text-white text-lg md:text-xl font-heading font-semibold mb-3 leading-tight">
                           {category.title}
                         </h3>
                         <p className="text-white/90 text-xs md:text-sm leading-relaxed">
