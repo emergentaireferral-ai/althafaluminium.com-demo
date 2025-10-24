@@ -28,7 +28,7 @@ import newPhoto3 from "@/assets/IMG-20251018-WA0088.jpg";
 import newPhoto4 from "@/assets/IMG-20251018-WA0086.jpg";
 import newPhoto5 from "@/assets/IMG-20251018-WA0087.jpg";
 import newPhoto6 from "@/assets/IMG-20251018-WA0089.jpg";
-import newPhoto7 from "@/assets/IMG-20251018-WA0019.jpg";
+import newPhoto7 from "@/assets/IMG-20251018-WA0084.jpg";
 import newPhoto8 from "@/assets/WhatsApp Image 2025-10-18 at 22.23.58_f144f512.jpg";
 import newPhoto9 from "@/assets/IMG-20251018-WA0015.jpg";
 import newPhoto10 from "@/assets/IMG-20251020-WA0019.jpg";
