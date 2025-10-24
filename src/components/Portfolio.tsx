@@ -46,7 +46,6 @@ import recentPhoto3 from "@/assets/IMG-20251021-WA0041.jpg";
 import recentPhoto4 from "@/assets/IMG-20251021-WA0042.jpg";
 import recentPhoto5 from "@/assets/IMG-20251021-WA0044.jpg";
 import butterflyLouver from "@/assets/IMG-20251021-WA0030 copy.jpg";
-import glassPartition from "@/assets/IMG-20251018-WA0091.jpg";
 const Portfolio = () => {
   const categories = [{
     title: "Aluminum Partitions",
@@ -71,7 +70,7 @@ const Portfolio = () => {
   }, {
     title: "Glass Partition",
     description: "Premium tempered glass partitions with sleek aluminum frames for modern offices",
-    image: glassPartition,
+    image: serviceGlass,
     icon: Settings
   }, {
     title: "Custom Designs",
