@@ -193,13 +193,13 @@ const Portfolio = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                       
                       <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
-                        <div className="bg-accent/20 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                          <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                        <div className="bg-accent/20 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="w-4 h-4 md:w-6 md:h-6 text-accent" />
                         </div>
-                        <h3 className="text-white text-lg md:text-xl font-heading font-semibold mb-3 leading-tight">
+                        <h3 className="text-white text-sm md:text-xl font-heading font-semibold mb-1 md:mb-3 leading-tight">
                           {category.title}
                         </h3>
-                        <p className="text-white/90 text-xs md:text-sm leading-relaxed">
+                        <p className="text-white/90 text-[10px] md:text-sm leading-snug md:leading-relaxed">
                           {category.description}
                         </p>
                       </div>
