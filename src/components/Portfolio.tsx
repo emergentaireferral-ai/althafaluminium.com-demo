@@ -68,8 +68,8 @@ const Portfolio = () => {
     image: butterflyLouver,
     icon: Frame
   }, {
-    title: "Industrial Installations",
-    description: "Heavy-duty aluminum installations for industrial environments",
+    title: "Glass Partition",
+    description: "Premium tempered glass partitions with sleek aluminum frames for modern offices",
     image: serviceGlass,
     icon: Settings
   }, {
